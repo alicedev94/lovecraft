@@ -61,20 +61,17 @@
 </button>
 }
 ```
+
 # Add architecture diagrams (Mermaid.js)
+
 graph TD
 A[.kk Component] --> B{Compiler}
 B --> C[SSR Node/Deno]
 B --> D[Static Frontend]
 C --> E[Unified API]
 
-
-Feature	Next.js	SvelteKit	This Project
-Minimal Config	❌	✅	✅✅
-Full-Stack	✅	✅	✅✅
-1-Command Deploy	❌	❌	✅
-
 # Target CLI Commands
+
 kk create my-project --tailwind --sql
 kk add component MyForm --type=form
 kk deploy --cloud=aws
