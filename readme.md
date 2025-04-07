@@ -1,104 +1,80 @@
-# Proyecto [lovecraft] 🚀
+# Project [lovecraft] 🚀
 
-**Objetivo**: Crear un framework full-stack integrado que combine las ventajas de una arquitectura monolítica con herramientas modernas (TypeScript, Tailwind, SSR), eliminando complejidades de configuración.
+**Objective**: Create an integrated full-stack framework that combines the advantages of a monolithic architecture with modern tools (TypeScript, Tailwind, SSR), eliminating configuration complexities.
 
-## 🎯 Metas Principales
+## 🎯 Key Goals
 
-1. Entender el funcionamiento interno de compiladores/bundlers (Vite, Webpack, Rollup).
-2. Optimizar el desarrollo full-stack unificando frontend/backend.
-3. Ofrecer una experiencia "zero-config" con:
-    - TypeScript nativo
-    - Tailwind integrado
-    - SSR personalizable
-    - Generación automática de configuraciones para despliegue
+1. Understand the inner workings of compilers/bundlers (Vite, Webpack, Rollup).
+2. Optimize full-stack development by unifying frontend/backend.
+3. Deliver a "zero-config" experience with:
+    - Native TypeScript
+    - Integrated Tailwind
+    - Customizable SSR
+    - Automatic deployment configuration generation
 
-## ⚡️ Cómo Funciona
+## ⚡️ How It Works
 
-### Arquitectura Híbrida (Monolito Inteligente)
+### Hybrid Architecture (Smart Monolith)
 
-| **Ventajas**                       | **Desventajas Tradicionales**        |
-| ---------------------------------- | ------------------------------------ |
-| Debugging centralizado de API      | Control de versiones separado        |
-| Despliegue unificado (1 puerto)    | Proyectos más pesados                |
-| Componentes listos para producción | Problemas de CORS                    |
-| Documentación automática           | Configuración compleja de WebSockets |
+| **Advantages**              | **Traditional Disadvantages**   |
+| --------------------------- | ------------------------------- |
+| Centralized API debugging   | Separate version control        |
+| Unified deployment (1 port) | Heavier projects                |
+| Production-ready components | CORS issues                     |
+| Automatic documentation     | Complex WebSocket configuration |
 
-## 🛠 Roadmap Técnico
+## 🛠 Technical Roadmap
 
-### Fase 1: Motor de Plantillas .kk
+### Phase 1: .kk Template Engine
 
--   [ ] Crear compilador de `.kk` → HTML  
-        _Ejemplo:_
+-   [ ] Create .kk → HTML compiler  
+         _Example:_
 
     ```js
-    // Implementación básica con regex
-    function compileKK(plantilla) {
-      return plantilla.replace(/(\w+) -> (.+)/g, '<$1>$2</$1>');
+    // Basic regex implementation
+    function compileKK(template) {
+    	return template.replace(/(\w+) -> (.+)/g, '<$1>$2</$1>');
     }
-
-    Implementar SSR en Node.js/Express
     ```
 
-Añadir soporte para TypeScript y Tailwind
+-   [ ] Implement SSR in Node.js/Express
+-   [ ] Add TypeScript and Tailwind support
 
-Fase 2: CLI Avanzado
-Generador de configuraciones para Nginx/HTTPS
+### Phase 2: Advanced CLI
 
-Scaffolding de proyectos (CRUDs, auth, API)
+-   [ ] Configuration generator for Nginx/HTTPS
+-   [ ] Project scaffolding (CRUDs, auth, API)
+-   [ ] Plugin system for WebSockets/GraphQL
 
-Sistema de plugins para WebSockets/GraphQL
+### Phase 3: Portability
 
-Fase 3: Portabilidad
-Migrar core a Deno (TypeScript nativo)
+-   [ ] Migrate core to Deno (Native TypeScript)
+-   [ ] Edge computing support (Cloudflare Workers)
 
-Soporte para edge computing (Cloudflare Workers)
+## 💡 Project Philosophy
 
-💡 Filosofía del Proyecto
-
-// Ejemplo de componente .kk (futura sintaxis)
-@componente MiBoton {
+```kk
+// Example .kk component (future syntax)
+@component MyButton {
 <button class="bg-blue-500 text-white p-2 rounded">
-{{ props.texto }}
+{{ props.text }}
 </button>
 }
-
-Cómo Contribuir
-Clona el repo: git clone [URL]
-
-Instala dependencias: pnpm install
-
-Explora los módulos clave:
-
-/compiler: Motor de plantillas .kk
-
-/cli: Generador de configuraciones
-
-/runtime: Soporte para SSR/Deno
-
-📈 Visión a Largo Plazo
-"Quiero revolucionar el desarrollo web unificando lo mejor de ambos mundos, eliminando 90% de los archivos de configuración y haciendo el deploy tan simple como kk deploy --prod" - [Tu nombre]
-
----
-
-### 🔍 Sugerencias Adicionales:
-
-1. **Añade diagramas de arquitectura** (Mermaid.js):
-
-```mermaid
-graph TD
-  A[Componente .kk] --> B{Compilador}
-  B --> C[SSR Node/Deno]
-  B --> D[Frontend estático]
-  C --> E[API unificada]
-
-
-Feature	Next.js	SvelteKit	Este Proyecto
-Configuración mínima	❌	✅	✅✅
-Full-Stack integrado	✅	✅	✅✅
-Deploy en 1 comando	❌	❌	✅
-
-# Comandos objetivo del CLI
-kk create mi-proyecto --tailwind --sql
-kk add componente MiFormulario --type=form
-kk deploy --cloud=aws
 ```
+# Add architecture diagrams (Mermaid.js)
+graph TD
+A[.kk Component] --> B{Compiler}
+B --> C[SSR Node/Deno]
+B --> D[Static Frontend]
+C --> E[Unified API]
+
+
+Feature	Next.js	SvelteKit	This Project
+Minimal Config	❌	✅	✅✅
+Full-Stack	✅	✅	✅✅
+1-Command Deploy	❌	❌	✅
+
+# Target CLI Commands
+kk create my-project --tailwind --sql
+kk add component MyForm --type=form
+kk deploy --cloud=aws
