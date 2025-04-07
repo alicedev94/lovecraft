@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch main.js"
+    "dev": "node --watch ./kk-engine-template/main.js"
   },
   "keywords": [],
   "author": "",
