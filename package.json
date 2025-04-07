@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch ./kk-engine-template/main.js"
+    "kk": "node --watch ./kk-engine-template/main.js",
+    "ssr-love": "node --watch ./ssr-love/main.js"
   },
   "keywords": [],
   "author": "",

@@ -49,5 +49,5 @@ const engineView = (template) => {
 
 // Generate and log the final HTML
 const result = engineView(renderTemplate())
-console.log(result)
+//console.log(result)
 
