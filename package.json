@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "kk": "node --watch ./kk-engine-template/main.js",
-    "ssr-love": "node --watch ./ssr-love/main.js"
+    "ssr-love": "node --watch ./ssr-love/main.js",
+    "rsc-vanilla": "node --watch ./rsc-vanilla/main.js"
   },
   "keywords": [],
   "author": "",
