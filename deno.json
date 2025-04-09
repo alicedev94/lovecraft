@@ -1,6 +1,9 @@
 {
   "imports": {
-    "oak": "https://deno.land/x/oak@v12.6.1/mod.ts"
+    "oak": "https://deno.land/x/oak@v12.6.1/mod.ts",
+    "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
+    "@cliffy/prompt": "jsr:@cliffy/prompt@^1.0.0-rc.7",
+    "@cliffy/ansi/colors": "jsr:@cliffy/ansi@1.0.0-rc.7/colors"
   },
   "tasks": {
     "start": "deno run --allow-net --allow-read --watch src/ssr-love-deno/main.ts"
