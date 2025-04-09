@@ -88,5 +88,3 @@
 
 **Filosofía Clave**:  
 > *"No reinventar la rueda. Usar Vue para interacción y enfocarse en un ecosistema cohesivo (como Next.js + React)."*  
-
-Si necesitas profundizar en algún punto, avísame! 🚀
