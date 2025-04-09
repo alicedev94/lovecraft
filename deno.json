@@ -3,6 +3,6 @@
     "oak": "https://deno.land/x/oak@v12.6.1/mod.ts"
   },
   "tasks": {
-    "start": "deno run --allow-net src/ssr-love-deno/main.ts"
+    "start": "deno run --allow-net --allow-read --watch src/ssr-love-deno/main.ts"
   }
 }
