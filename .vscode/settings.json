@@ -1,5 +1,10 @@
 {
     "cSpell.words": [
         "rolldown"
-    ]
+    ],
+    "deno.enablePaths": [
+        "./src"
+    ],
+    "deno.lint": true,
+    "deno.enable": true
 }
