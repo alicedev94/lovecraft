@@ -1,77 +1,91 @@
-# Project [lovecraft] 🚀
+### Organización y Siguientes Pasos para el Proyecto (Iniciado el 8/4/2025)
 
-**Objective**: Create an integrated full-stack framework that combines the advantages of a monolithic architecture with modern tools (TypeScript, Tailwind, SSR), eliminating configuration complexities.
+---
 
-## 🎯 Key Goals
+#### **Investigaciones Completadas (Checklist):**
+1. **SSR y Sistemas de Plantillas** (EJS, Handlebars, etc.): Entendimiento de cómo funcionan y su sintaxis no nativa.  
+2. **Next.js**: Su uso de React para evitar reinventar la interacción con el usuario, filosofía que adoptarán con **Vue**.  
+3. **Deno sobre Node**: Ventajas de Deno (seguridad, ESM nativo, integración con TS).  
+4. **JSR y Tipado**: Uso de TypeScript de forma nativa y prohibición de CommonJS.  
+5. **Recarga en Tiempo de Ejecución**: Limitaciones de Oak para recarga automática.  
+6. **Scripts en Deno**: Configuración en `deno.json`.  
+7. **TypeScript en Desarrollo Moderno**: Importancia del tipado estático.  
+8. **Sintaxis de TS Nativa**: Integración sin configuración adicional.  
 
-1. Understand the inner workings of compilers/bundlers (Vite, Webpack, Rollup).
-2. Optimize full-stack development by unifying frontend/backend.
-3. Deliver a "zero-config" experience with:
-    - Native TypeScript
-    - Integrated Tailwind
-    - Customizable SSR
-    - Automatic deployment configuration generation
+---
 
-## ⚡️ How It Works
+#### **Próximos Pasos Prioritarios:**
 
-### Hybrid Architecture (Smart Monolith)
+##### **1. Herramientas de Bundling (Punto 10)**  
+   - **Objetivo**: Entender cómo **Rollup**, **Vite** y **Webpack** funcionan y cuál se alinea mejor con Deno + Vue.  
+   - **Acciones**:  
+     - Investigar compatibilidad de Vite con Deno (ej: [vite-plugin-deno](https://github.com/denoland/vite-plugin-deno)).  
+     - Comparar ventajas de Rollup (ligero) vs Webpack (flexible).  
+   - **Resultado Esperado**: Decidir la herramienta para el bundling del proyecto.  
 
-| **Advantages**              | **Traditional Disadvantages**   |
-| --------------------------- | ------------------------------- |
-| Centralized API debugging   | Separate version control        |
-| Unified deployment (1 port) | Heavier projects                |
-| Production-ready components | CORS issues                     |
-| Automatic documentation     | Complex WebSocket configuration |
+##### **2. CLI y Generación de Estructuras (Punto 11)**  
+   - **Objetivo**: Implementar un CLI que genere archivos, carpetas y estructuras básicas del proyecto.  
+   - **Acciones**:  
+     - Usar bibliotecas como [Cliffy](https://github.com/c4spar/deno-cliffy) para construir el CLI en Deno.  
+     - Definir plantillas iniciales (ej: `create-lovecraft-app`).  
+   - **Resultado Esperado**: Comando `lovecraft new <project-name>` funcional.  
 
-## 🛠 Technical Roadmap
+##### **3. Compatibilidad Multi-OS (Punto 12)**  
+   - **Objetivo**: Garantizar que el proyecto funcione en Windows, Linux y macOS.  
+   - **Acciones**:  
+     - Testear scripts en diferentes entornos.  
+     - Usar Deno APIs en lugar de llamadas específicas de sistema.  
 
-### Phase 1: .kk Template Engine
+##### **4. Integración de Tailwind CSS (Punto 14)**  
+   - **Objetivo**: Integración nativa de Tailwind sin configuración compleja.  
+   - **Acciones**:  
+     - Usar [Tailwind para Deno](https://github.com/crewdevio/tailwind-deno).  
+     - Crear un plugin/postcss automático en el CLI.  
 
--   [ ] Create .kk → HTML compiler  
-         _Example:_
+##### **5. Diseño de UI (Punto 15)**  
+   - **Objetivo**: Definir una interfaz "simple pero profesional" inspirada en herramientas como Vercel o Vite.  
+   - **Acciones**:  
+     - Crear componentes base (ej: botones, formularios) con Tailwind.  
+     - Priorizar oscuridad/light mode y accesibilidad.  
 
-    ```js
-    // Basic regex implementation
-    function compileKK(template) {
-    	return template.replace(/(\w+) -> (.+)/g, '<$1>$2</$1>');
-    }
-    ```
+##### **6. Documentación (Punto 16)**  
+   - **Objetivo**: Usar VitePress para documentación técnica y branding.  
+   - **Acciones**:  
+     - Definir estructura de docs (Guías, API, Ejemplos).  
+     - Diseñar logo y personalidad ("LOVECRAFT").  
 
--   [ ] Implement SSR in Node.js/Express
--   [ ] Add TypeScript and Tailwind support
+##### **7. Pruebas Automatizadas (Punto 18)**  
+   - **Objetivo**: Implementar tests unitarios y E2E.  
+   - **Acciones**:  
+     - Usar [Deno Testing](https://deno.land/manual/testing) y herramientas como Playwright.  
 
-### Phase 2: Advanced CLI
+##### **8. Definición del MVP (Punto 19)**  
+   - **Core del MVP**:  
+     - CLI para generar proyectos.  
+     - SSR con Vue + Deno (Oak).  
+     - Soporte nativo de TS y Tailwind.  
+     - Documentación básica y diseño inicial.  
 
--   [ ] Configuration generator for Nginx/HTTPS
--   [ ] Project scaffolding (CRUDs, auth, API)
--   [ ] Plugin system for WebSockets/GraphQL
+---
 
-### Phase 3: Portability
+#### **Riesgos y Consideraciones:**  
+- **Deno + Vue SSR**: No hay soluciones maduras. Investigar [Vue Deno](https://github.com/denoland/deno_vue) o implementar un renderizador custom.  
+- **JSR y Módulos**: Asegurar que las dependencias usen ESM y sean compatibles con JSR.  
+- **Comunidad**: Atraer colaboradores con un diseño atractivo y filosofía clara ("amamos a Evan You").  
 
--   [ ] Migrate core to Deno (Native TypeScript)
--   [ ] Edge computing support (Cloudflare Workers)
+---
 
-## 💡 Project Philosophy
+#### **Timeline Propuesto:**  
+| Semana | Objetivo |  
+|--------|----------|  
+| 1      | Bundling (Rollup/Vite) + CLI básico |  
+| 2      | Integración Tailwind + UI base |  
+| 3      | Pruebas Automatizadas + Docs |  
+| 4      | MVP (SSR + Generación de Proyectos) |  
 
-```kk
-// Example .kk component (future syntax)
-@component MyButton {
-<button class="bg-blue-500 text-white p-2 rounded">
-{{ props.text }}
-</button>
-}
-```
+---
 
-# Add architecture diagrams (Mermaid.js)
+**Filosofía Clave**:  
+> *"No reinventar la rueda. Usar Vue para interacción y enfocarse en un ecosistema cohesivo (como Next.js + React)."*  
 
-graph TD
-A[.kk Component] --> B{Compiler}
-B --> C[SSR Node/Deno]
-B --> D[Static Frontend]
-C --> E[Unified API]
-
-# Target CLI Commands
-
-kk create my-project --tailwind --sql
-kk add component MyForm --type=form
-kk deploy --cloud=aws
+Si necesitas profundizar en algún punto, avísame! 🚀
