@@ -14,10 +14,12 @@ const html = `
             <title>Deno, Oak, Vue</title>
             <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+                <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
         </head>
         <body>
             <div id="app">
-                <h1>{{ serverData.title }}</h1>
+                <h1 class="text-3xl font-bold underline">{{ serverData.title }}</h1>
                 <p>{{ serverData.description }}</p>
                 
                 <div class="counter">

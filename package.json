@@ -6,6 +6,7 @@
     "kk": "node --watch ./src/kk-engine-template/main.js",
     "ssr-love": "node --watch ./src/ssr-love/main.js",
     "ssr-love-deno": "deno --watch  ./src/ssr-love-deno/main.ts",
+    "ssr-love-deno-tailwind": "deno --watch  ./src/ssr-love-deno-tailwind/main.ts",
     "rsc-vanilla": "node --watch ./src/rsc-vanilla/main.js"
   },
   "keywords": [],
