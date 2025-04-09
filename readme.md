@@ -64,7 +64,8 @@
      - CLI para generar proyectos.  
      - SSR con Vue + Deno (Oak).  
      - Soporte nativo de TS y Tailwind.  
-     - Documentación básica y diseño inicial.  
+     - Documentación básica y diseño inicial.
+     - Componentes funcionales con el CLI, Entidades ETC (FILAMENT en laravel)
 
 ---
 
