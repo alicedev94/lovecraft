@@ -2,7 +2,7 @@ import { Application } from "jsr:@oak/oak/application";
 import { Router } from "jsr:@oak/oak/router";
 
 const data = {
-    title: 'SSR Love Deno Tailwind',
+    title: 'I develop the framework until it costs $1',
     description: 'Demo app for Deno, Oak, and Vue',
     count: 0
 }
@@ -16,7 +16,7 @@ const html = `<!DOCTYPE html>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         .diagonal-stripes {
-            background-image: linear-gradient(45deg, #94a3b8 25%, transparent 25%);
+            background-image: linear-gradient(45deg, #ffffff 25%, transparent 25%);
         }
     </style>
 </head>
