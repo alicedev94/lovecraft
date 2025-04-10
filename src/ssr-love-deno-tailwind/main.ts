@@ -3,7 +3,7 @@ import { Router } from "jsr:@oak/oak/router";
 
 const data = {
     title: 'I develop the framework until it costs $1',
-    description: 'Demo app for Deno, Oak, and Vue',
+    description: 'DENO, OAK, VUE, TAILWIND',
     count: 0
 }
 
@@ -16,14 +16,16 @@ const html = `<!DOCTYPE html>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         .diagonal-stripes {
-            background-image: linear-gradient(45deg, #ffffff 25%, transparent 25%);
+            background-image: linear-gradient(45deg, #1a1a2e 25%, #16213e 25%);
+            background-color: #0f3460;
+            background-blend-mode: overlay;
         }
     </style>
 </head>
-<body class="diagonal-stripes bg-slate-900  min-h-screen">
+<body class="diagonal-stripes min-h-screen">
     <div class="flex flex-col items-center justify-center mt-20" id="app">
         <h1 class="text-3xl font-bold">{{ serverData.title }}</h1>
-        <p>{{ serverData.description }}</p>
+        <p class="text-gray-500 font-mono">{{ serverData.description }}</p>
         <div class="counter">
             <div class="flex flex-col items-center bg-slate-400 p-4 gap-2 rounded-md  justify-center shadow-lg">
                 <p class="font-semibold text-white text-4xl">{{ count }}</p>
