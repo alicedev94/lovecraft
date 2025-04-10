@@ -2,8 +2,9 @@ import { Application } from "jsr:@oak/oak/application";
 import { Router } from "jsr:@oak/oak/router";
 
 const data = {
-    title: 'SSR Love Deno Tailwind',
-    description: 'Demo app for Deno, Oak, and Vue',
+    // change font
+    title: 'I develop the framework until it costs $1',
+    description: 'DENO • OAK • VUE • TAILWIND',
     count: 0
 }
 
@@ -16,18 +17,22 @@ const html = `<!DOCTYPE html>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         .diagonal-stripes {
-            background-image: linear-gradient(45deg, #94a3b8 25%, transparent 25%);
+            background-image: linear-gradient(45deg, #1a1a2e 25%, #16213e 25%);
+            background-color: #0f3460;
+            background-blend-mode: overlay;
         }
     </style>
 </head>
-<body class="diagonal-stripes bg-slate-900  min-h-screen">
-    <div class="flex flex-col items-center justify-center mt-20" id="app">
-        <h1 class="text-3xl font-bold">{{ serverData.title }}</h1>
-        <p>{{ serverData.description }}</p>
+<body class="min-h-screen diagonal-stripes">
+    <div class="flex flex-col items-center justify-center mt-20 gap-4" id="app">
+        <div class="flex flex-col items-center justify-center">
+            <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">{{ serverData.title }}</h1>
+            <p class="font-mono text-gray-500">{{ serverData.description }}</p>
+        </div>
         <div class="counter">
-            <div class="flex flex-col items-center bg-slate-400 p-4 gap-2 rounded-md  justify-center shadow-lg">
-                <p class="font-semibold text-white text-4xl">{{ count }}</p>
-                <button class="bg-transparent text-white border border-white border-3  rounded-md p-1  uppercase font-semibold rounded-md" @click="increment">one up</button>
+            <div class="flex flex-col items-center justify-center p-4 gap-2 bg-white rounded-md shadow-lg">
+                <p class="text-4xl font-semibold text-gray-400">{{ count }}</p>
+                <button class="p-1 font-semibold uppercase text-gray-400 bg-transparent border border-gray-400 rounded-md hover:cursor-pointer" @click="increment">one up</button>
             </div>
         </div>
     </div>
@@ -38,15 +43,15 @@ const html = `<!DOCTYPE html>
             data() {
                 return {
                     serverData: ${JSON.stringify(data)},
-                count: ${data.count}
-            }
-        },
+                    count: ${data.count}
+                }
+            },
             methods: {
-            increment() {
-                this.count++;
+                increment() {
+                    this.count++;
+                }
             }
-        }
-            }).mount('#app');
+        }).mount('#app');
     </script>
 </body>
 </html>`;
