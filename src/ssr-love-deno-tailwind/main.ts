@@ -14,8 +14,13 @@ const html = `<!DOCTYPE html>
     <title>SSR Love Deno Tailwind</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .diagonal-stripes {
+            background-image: linear-gradient(45deg, #94a3b8 25%, transparent 25%);
+        }
+    </style>
 </head>
-<body>
+<body class="diagonal-stripes bg-slate-900  min-h-screen">
     <div class="flex flex-col items-center justify-center mt-20" id="app">
         <h1 class="text-3xl font-bold">{{ serverData.title }}</h1>
         <p>{{ serverData.description }}</p>
