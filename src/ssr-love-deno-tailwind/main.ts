@@ -2,8 +2,7 @@ import { Application } from "jsr:@oak/oak/application";
 import { Router } from "jsr:@oak/oak/router";
 
 const data = {
-    // change font
-    title: 'FFI develop the framework until it costs $1',
+    title: 'I Develop The Framework Until It Costs $1',
     description: 'DENO • OAK • VUE • TAILWIND',
     count: 0
 }
